@@ -10,10 +10,10 @@ var trait3 = "Mental State that borders on Insanity";
 var characteristics = [];
 
 var title = "Dr."
-var firsname = "Emmett";
+var firstname = "Emmett";
 var surname = "Brown";
 
-console.log("Name: " + title + " " + firsname + " " + surname);
+console.log("Name: " + title + " " + firstname + " " + surname);
 console.log("Traits: ");
 
 trait1 = "Horrible Person";

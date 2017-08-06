@@ -29,4 +29,4 @@ console.log("Firstname: " + alPacino.getFirstname());
 console.log("Surname: " + alPacino.getSurname());
 
 // Using Object Literals to represent the person class, change the above example so that the object variable is instead
-// an Object liberal
+// an Object liberal. This should produce a cleaner syntax.
