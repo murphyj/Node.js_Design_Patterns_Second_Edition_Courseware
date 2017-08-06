@@ -1,5 +1,3 @@
-"use strict";
-
 var Shape = function(x, y) {
     this.x = x;
     this.y = y;
