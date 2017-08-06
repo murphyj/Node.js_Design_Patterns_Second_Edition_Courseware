@@ -4,7 +4,7 @@ describe('NodeJS: Chapter One', () => {
 
   let co;
   beforeEach(() => {
-      co = require('../chapter-one/chapterone');
+      co = require('./chapterone');
   });
 
   describe('Maps and Sets', () => {
