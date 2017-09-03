@@ -2,10 +2,10 @@
 
 For this task we'd like to incorporate everything we've learned in Chapter 2:
 
- * Asynchronous continuous-passing style callbacks (CPS)
- * Error handling in asynchronous applications
+ * When to choose synchronous and asynchronous
  * Observer pattern / listening on events to trigger application behaviour
  * Modules for splitting your application into manageable chunks
+ * Review of Chapter 1 - classes, let and const
 
 We'd like to write an application that reports (every 30 seconds) the Microsoft Stock Price (MSFT) since the start of the millennium. It reports the value that day along with the percentage change since the last day stock price update.
 
@@ -44,3 +44,25 @@ We should also have sensible classes, for example:
  * StockPriceOutput
 
 ## Sample output
+
+```
+DOWN NaN% 74.7400
+DOWN -0.29% 74.9600
+DOWN 1.01% 74.2100
+DOWN 1.44% 73.1600
+UP 0.10% 73.0900
+DOWN -0.35% 73.3500
+DOWN 0.67% 72.8600
+UP -0.40% 73.1500
+DOWN -0.12% 73.2400
+UP 1.05% 72.4800
+DOWN -0.49% 72.8400
+UP -1.39% 73.8700
+DOWN -0.31% 74.1000
+UP 0.69% 73.5900
+DOWN -0.18% 73.7200
+DOWN 1.40% 72.7000
+UP 0.71% 72.1900
+```
+
+Ignore NaN this is just because we don't have a previous stock price as it's the first stock price in the file.
