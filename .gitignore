@@ -3,3 +3,4 @@
 /.idea/*
 /Chapter01/.DS_Store
 /NodeJsDesignPatterns.iml
+/Chapter03/01_callback_hell/node_modules
