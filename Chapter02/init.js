@@ -1,4 +1,4 @@
-const code = 'MSFT'
+const code = 'MSFT';
 const stockPrice = new StockPrice(code);
 stockPrice.start();
 
