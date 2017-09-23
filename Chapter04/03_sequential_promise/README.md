@@ -53,4 +53,5 @@ Palindrome @ index 7 - is Palindrome? false - Red Lorry Yellow Lorry
 Palindrome @ index 8 - is Palindrome? true - A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!
 ```
 
-As you can see - we processed and output each result sequentially despite processing them asynchronously!
+As you can see - we processed and output each result sequentially despite processing them using Promises asynchronously!
+That means that each sequential task waited for the previous one to complete before continuing on.
