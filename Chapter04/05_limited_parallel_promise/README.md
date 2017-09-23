@@ -1,0 +1,50 @@
+# Limited Parallel Place Requests
+
+*Note*: _This is the same as Exercise 4 - Parallel Promises. However, you will need to limit the number of parallel requests that are made.
+Remember... if you were to allow hundreds of thousands of requests in your application at any one point in time then it would lead to resource exhaustion. As a consequence we need to restrict the number of possible parallel requests that can be executed at any one point in time._  
+
+You work for a Ground Transportation company who provide services for Taxi and private hire pickups, in a team responsible for implementing an API that serves any clients that wish to consume your library and search for any place in the world.
+
+Your goal is to write a function that utilises the Google Places API. You pass the name of the place to Google's API and Google returns the Google Place Id for each place you are searching for.
+
+Your mission, should you choose to accept it, is to:
+
+* Create functions that make asynchronous HTTP calls to [Google's Place Autocomplete API](https://developers.google.com/places/web-service/autocomplete)
+* Set the limit of parallel tasks to 2
+* Return and store the Google Place Id and description for the first matching place
+* Show that the calls are sent in parallel and occur asynchronously by printing the order in which they occur
+* Demonstrate that requests are being made in parallel by logging out their execution and running the exercise multiple times from the console
+
+Clients are searching for the following places:
+
+```
+Big Ben
+10 Downing Street
+Tower of London
+Trafalgar Square London
+Heathrow Airport
+San Francisco International Airport
+Infinite Loop
+```
+
+## Google Places Web API
+
+You will need to sign-up for a Google API Key to access the Google Maps API.
+You can do so using [Google's Developer Console](https://console.developers.google.com]) using the `Credentials` tab to create a key and the Dashboard tab to enable the `Google Places API Web Service` API.
+
+Once you've signed up the Google API you can try out the following request to search for each place:
+
+```
+https://maps.googleapis.com/maps/api/place/autocomplete/json?key=<insert_your_google_api_key>&input=<place_to_search>&language=en-gb&location=0,0&radius=200000&components=country:gb
+```
+
+`<place_to_search>` can be replaced with `Big%20Ben` if you are searching for `Big Ben`
+`<insert_your_google_api_key>` should be replaced with your own google api key e.g. `AIzaSyCMJ6_IcN1PkIYqSidzUNwxeHbk-sJrs7E` (please sign up for your own - this is shared amongst students as an example and may not always work)
+
+In order to complete the exercise you should show:
+
+* The full description of the place e.g. _Big Ben, London, United Kingdom_
+* The place ID e.g. _ChIJ2dGMjMMEdkgRqVqkuXQkj7c_ 
+
+Best of luck soldier!
+  
