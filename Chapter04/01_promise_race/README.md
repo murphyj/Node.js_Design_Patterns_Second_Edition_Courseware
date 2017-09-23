@@ -28,12 +28,7 @@ In this task you will need to...
 * Use the Promise.race function to send the cars in a race against each other
 * Keep a tally of who wins each race and printout a leaderboard of winners as follows:
 
-
-    Wacky Races Leaderboard
-    -----------------------
-    #1 The Slag Brothers
-    #2 The Boulder Mobile
-    #3 Professor Pat Pending
+Please see the `sample-output.txt` file for an example of what your sample output could look like.
 
 
 
