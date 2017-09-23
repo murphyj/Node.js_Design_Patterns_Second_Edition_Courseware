@@ -16,11 +16,24 @@ Imagine we have a number of cars that are competing in the Wacky Races...
 | Sergeant Blast and Private Meekly | The Army Surplus Special |
 | Dick Dastardly and Muttley | The Mean Machine |
 
+Each of these cars has a team and car with a name. Each car takes anywhere between 0 and 1s to complete the race.
+
 We want to race them against each other by using our Promisify.race call
 
-Using Promise.race(cars) and figure out who the winner is after 100 races are determined.
+Using Promise.race(cars) figure out who the winner is after 100 races are determined.
 
-Simply line up all of the cars and let them go; it couldn't be any simpler than that!
+In this task you will need to...
+* Read the names of the teams and cars from the file `wacky_cars.json`
+* Setup the cars so that they will complete the race in an random amount of time from 0-1 seconds
+* Use the Promise.race function to send the cars in a race against each other
+* Keep a tally of who wins each race and printout a leaderboard of winners as follows:
+
+
+    Wacky Races Leaderboard
+    -----------------------
+    #1 The Slag Brothers
+    #2 The Boulder Mobile
+    #3 Professor Pat Pending
 
 
 
