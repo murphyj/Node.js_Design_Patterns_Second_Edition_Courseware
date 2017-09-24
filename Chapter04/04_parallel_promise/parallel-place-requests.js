@@ -46,7 +46,6 @@ function ParallelPlaceRequests() {
               const responseObj = JSON.parse(data);
 
               if (responseObj.status !== 'ZERO_RESULTS') {
-                console.log('Pushing result to results');
                 results.push({
                   'request': request,
                   'description': responseObj.predictions[0].description,
