@@ -44,7 +44,7 @@ https://maps.googleapis.com/maps/api/place/autocomplete/json?key=<insert_your_go
 In order to complete the exercise you should show:
 
 * The full description of the place e.g. _Big Ben, London, United Kingdom_
-* The place ID e.g. _ChIJ2dGMjMMEdkgRqVqkuXQkj7c_ 
+* The place ID e.g. _AIzaSyCMJ6_IcN1PkIYqSidzUNwxeHbk-sJrs7E_
 
 Best of luck soldier!
   
