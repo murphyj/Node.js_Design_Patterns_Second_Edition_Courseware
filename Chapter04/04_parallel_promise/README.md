@@ -18,8 +18,8 @@ Big Ben
 Tower of London
 Trafalgar Square London
 Heathrow Airport
-San Francisco International Airport
-Infinite Loop
+Stonehenge
+Tower Bridge
 ```
 
 ## Google Places Web API
