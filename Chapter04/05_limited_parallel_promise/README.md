@@ -46,5 +46,22 @@ In order to complete the exercise you should show:
 * The full description of the place e.g. _Big Ben, London, United Kingdom_
 * The place ID e.g. _AIzaSyCMJ6_IcN1PkIYqSidzUNwxeHbk-sJrs7E_
 
+If you've completed the task you should see something similar to the following output:
+
+```
+➜  05_limited_parallel_promise git:(master) ✗ node limited-parallel-requests.js
+---------------------
+Google Place Results
+---------------------
+Description [Tower of London, London, United Kingdom] - PlaceID [ChIJ3TgfM0kDdkgRZ2TV4d1Jv6g]
+Description [Heathrow Airport, Longford, United Kingdom] - PlaceID [ChIJ6W3FzTRydkgRZ0H2Q1VT548]
+Description [10 Downing Street, Downing Street, London, United Kingdom] - PlaceID [ChIJRxzRQcUEdkgRGVaKyzmkgvg]
+Description [Trafalgar Square, London, United Kingdom] - PlaceID [ChIJH-tBOc4EdkgRJ8aJ8P1CUxo]
+Description [Big Ben, London, United Kingdom] - PlaceID [ChIJ2dGMjMMEdkgRqVqkuXQkj7c]
+Description [Stonehenge, Amesbury, United Kingdom] - PlaceID [ChIJEfYKhTvmc0gR3dLTvOJwkZc]
+```
+
 Best of luck soldier!
+
+*Hint*: If you make HTTP requests using an asynchronous library from within a promise and you call Promise.all so that all promises resolve in parallel, what considerations are there for printing out the results and what can you do to overcome them?
   
