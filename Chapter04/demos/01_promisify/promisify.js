@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports.promisify = function(callbackBasedApi) {
   return function promisified() {
     const args = [].slice.call(arguments);

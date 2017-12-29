@@ -1,4 +1,4 @@
-require('./promisify');
+const Promisify = require('./promisify');
 
 function a() {
   console.log("Invoking A");
@@ -8,9 +8,8 @@ function b() {
   console.log("Invoking B");
 }
 
-var promisifiedA = promisify(a);
-var promisifiedB = promisify(a);
+var promisifiedA = Promisify.promisify(a);
+var promisifiedB = Promisify.promisify(b);
 
-promisifiedB()
-.then(promisifiedA())
-.then(Promise.resolve());
+promisifiedB();
+promisifiedA();
