@@ -1,4 +1,4 @@
-const Promisify = require('./promisify');
+const Promisify = require('./utilities');
 
 function a() {
   console.log("Invoking A");

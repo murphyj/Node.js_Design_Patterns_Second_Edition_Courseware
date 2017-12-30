@@ -5,22 +5,22 @@ const path = require('path');
 const utilities = require('./utilities');
 
 function spiderLinks(currentUrl, body, nesting, callback) {
-  if(nesting === 0) {
+  if (nesting === 0) {
     return process.nextTick(callback);
   }
   const links = utilities.getPageLinks(currentUrl, body);
-  if(links.length === 0) {
+  if (links.length === 0) {
     return process.nextTick(callback);
   }
 
   let completed = 0, hasErrors = false;
 
   function done(err) {
-    if(err) {
+    if (err) {
       hasErrors = true;
       return callback(err);
     }
-    if(++completed === links.length && !hasErrors) {
+    if (++completed === links.length && !hasErrors) {
       return callback();
     }
   }
@@ -32,7 +32,7 @@ function spiderLinks(currentUrl, body, nesting, callback) {
 
 function saveFile(filename, contents, callback) {
   mkdirp(path.dirname(filename), err => {
-    if(err) {
+    if (err) {
       return callback(err);
     }
     fs.writeFile(filename, contents, callback);
@@ -42,11 +42,11 @@ function saveFile(filename, contents, callback) {
 function download(url, filename, callback) {
   console.log(`Downloading ${url}`);
   request(url, (err, response, body) => {
-    if(err) {
+    if (err) {
       return callback(err);
     }
     saveFile(filename, body, err => {
-      if(err) {
+      if (err) {
         return callback(err);
       }
       console.log(`Downloaded and saved: ${url}`);
@@ -58,13 +58,13 @@ function download(url, filename, callback) {
 function spider(url, nesting, callback) {
   const filename = utilities.urlToFilename(url);
   fs.readFile(filename, 'utf8', (err, body) => {
-    if(err) {
-      if(err.code !== 'ENOENT') {
+    if (err) {
+      if (err.code !== 'ENOENT') {
         return callback(err);
       }
 
       return download(url, filename, (err, body) => {
-        if(err) {
+        if (err) {
           return callback(err);
         }
         spiderLinks(url, body, nesting, callback);
@@ -75,4 +75,5 @@ function spider(url, nesting, callback) {
   });
 }
 
-spider('http://www.google.co.uk', 1, () => {});
+spider('http://www.google.co.uk', 1, () => {
+});
