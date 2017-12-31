@@ -10,10 +10,6 @@ const readFile = thunkify(fs.readFile);
 const writeFile = thunkify(fs.writeFile);
 const nextTick = thunkify(process.nextTick);
 
-const TaskQueue = require('./taskQueue');
-const downloadQueue = new TaskQueue(2);
-
-
 function* download(url, filename) {
   console.log(`Downloading ${url}`);
   const response = yield request(url);
@@ -43,7 +39,8 @@ function spiderLinks(currentUrl, body, nesting) {
     return nextTick();
   }
 
-  return (callback) => {
+  //returns a thunk
+  return callback => {
     let completed = 0, hasErrors = false;
     const links = utilities.getPageLinks(currentUrl, body);
     if (links.length === 0) {
@@ -60,12 +57,9 @@ function spiderLinks(currentUrl, body, nesting) {
       }
     }
 
-    links.forEach(function(link) {
-      downloadQueue.pushTask(function *() {
-        yield spider(link, nesting - 1);
-        done();
-      });
-    });
+    for (let i = 0; i < links.length; i++) {
+      co(spider(links[i], nesting - 1)).then(done);
+    }
   }
 }
 
