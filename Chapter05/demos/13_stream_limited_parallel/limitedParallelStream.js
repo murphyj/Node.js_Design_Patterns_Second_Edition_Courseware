@@ -1,7 +1,7 @@
 const stream = require('stream');
 
 class LimitedParallelStream extends stream.Transform {
-  constructor (concurrency, userTransform) {
+  constructor(concurrency, userTransform) {
     super({objectMode: true});
     this.concurrency = concurrency;
     this.userTransform = userTransform;
@@ -12,7 +12,9 @@ class LimitedParallelStream extends stream.Transform {
 
   _transform(chunk, enc, done) {
     this.running++;
-    this.userTransform(chunk, enc, this._onComplete.bind(this));
+    this.userTransform(chunk, enc, this.push.bind(this),
+        this._onComplete.bind(this));
+
     if (this.running < this.concurrency) {
       done();
     } else {

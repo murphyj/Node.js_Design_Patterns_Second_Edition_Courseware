@@ -5,11 +5,12 @@ const throughParallel = require('through2-parallel');
 fs.createReadStream(process.argv[2])
 .pipe(split())
 .pipe(throughParallel.obj({concurrency: 2}, (url, enc, done) => {
+
   if (!url) {
     return done();
   }
   request.head(url, (err, response) => {
-    push(url + ' is ' + (err ? 'down' : 'up') + '\n');
+    console.log(url + ' is ' + (err ? 'down' : 'up') + '\n');
     done();
   });
 }))
