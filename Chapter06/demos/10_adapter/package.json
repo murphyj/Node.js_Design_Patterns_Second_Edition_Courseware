@@ -1,8 +1,8 @@
 {
-  "name": "profiler",
+  "name": "adapter",
   "version": "1.0.0",
-  "description": "Demonstrates the use of a profiler",
-  "main": "profilerTest.js",
+  "description": "Demonstrates Adaptor pattern",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

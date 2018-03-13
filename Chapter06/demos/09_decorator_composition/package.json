@@ -1,8 +1,8 @@
 {
-  "name": "profiler",
+  "name": "decorator",
   "version": "1.0.0",
-  "description": "Demonstrates the use of a profiler",
-  "main": "profilerTest.js",
+  "description": "Demonstrates use of the decorator pattern using Composition",
+  "main": "decoratorTest",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

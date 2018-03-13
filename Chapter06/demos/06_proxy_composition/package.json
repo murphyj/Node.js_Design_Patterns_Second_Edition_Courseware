@@ -1,8 +1,8 @@
 {
-  "name": "profiler",
+  "name": "revealing-constructor",
   "version": "1.0.0",
-  "description": "Demonstrates the use of a profiler",
-  "main": "profilerTest.js",
+  "description": "Demonstrates the use of a revealing constructor when used with a ticker",
+  "main": "startTicker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

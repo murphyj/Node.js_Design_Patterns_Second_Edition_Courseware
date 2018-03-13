@@ -1,8 +1,8 @@
 {
-  "name": "profiler",
+  "name": "proxy-es2015",
   "version": "1.0.0",
-  "description": "Demonstrates the use of a profiler",
-  "main": "profilerTest.js",
+  "description": "Demonstrates how we can leverage the use of ES2015 Proxy objects",
+  "main": "evenNumbers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
