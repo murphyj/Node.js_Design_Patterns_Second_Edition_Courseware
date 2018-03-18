@@ -15,7 +15,7 @@ function createLoggingWritable (writableOrig) {
            console.log('Finished writing ', chunk);
            callback && callback();
         });
-    }
+    };
 
     LoggingWritable.prototype.on = function() {
         return this.writableOrig.on.apply(this.writableOrig, arguments);
