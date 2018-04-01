@@ -6,7 +6,6 @@ const fs = require('fs');
 const writeFile = utilities.promisify(fs.writeFile);
 const path = require('path');
 
-
 function spider(url) {
   const filename = utilities.urlToFilename(url);
   return download(url, filename);

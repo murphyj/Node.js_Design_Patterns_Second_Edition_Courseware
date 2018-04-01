@@ -11,3 +11,4 @@
 /Chapter03/01_callback_hell/discipline/node_modules
 /Chapter04/exercises/02_bluebird/node_modules
 node_modules
+.DS_Store
