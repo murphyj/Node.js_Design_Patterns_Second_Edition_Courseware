@@ -16,7 +16,7 @@ var surname = "Brown";
 console.log("Name: " + title + " " + firstname + " " + surname);
 console.log("Traits: ");
 
-trait1 = "Horrible Person";
+trait1 = "Horrible Person.js";
 
 characteristics.push(trait1, trait2, trait3);
 

@@ -31,6 +31,8 @@ In the states they can perform the following actions:
 - Sliding Tackle
 - Header
 
-Your task is to write code that will output all of the different possibilities that a player can have when they are in a particular state. You should use the State pattern only...
+Your task is to write code that will output all of the different possibilities that a player can have when they are in a particular state.
+
+You should use the State pattern to demonstrate this concept...
 
 
