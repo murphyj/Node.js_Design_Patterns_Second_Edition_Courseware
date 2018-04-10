@@ -44,15 +44,5 @@ eventEmitter.emit('initBoiled');
 console.log(" ");
 console.log(" ");
 
-//poachedEggRecipe.cook(egg);
-
-// const BoiledEggRecipe = require('./BoiledEggRecipe');
-//
-// const boiledEggRecipe = new BoiledEggRecipe();
-//
-// boiledEggRecipe.prepareSaucepan()
-//                .then(boiledEggRecipe.retrieveEgg())
-//                .then(boiledEggRecipe.cook());
-
 
 
