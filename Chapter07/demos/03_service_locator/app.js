@@ -3,14 +3,14 @@ const bodyParser = require('body-parser');
 const errorHandler = require('errorhandler');
 const http = require('http');
 
-const dbFactory = require('./lib/db');
-const authServiceFactory = require('./lib/authService');
-const authControllerFactory = require('./lib/authController');
+const svcLoc = require('./lib/serviceLocator')();
+svcLoc.register('dbName', 'example-db');
+svcLoc.register('tokenSecret', 'SHHH!');
+svcLoc.factory('db', require('./lib/db'));
+svcLoc.factory('authService', require('./lib/authService'));
+svcLoc.factory('authController', require('./lib/authController'));
 
-const db = dbFactory('example-db');
-const authService = authServiceFactory(db, 'SHHH!');
-const authController = authControllerFactory(authService);
-
+const authController = svcLoc.get('authController');
 
 const app = module.exports = express();
 app.use(bodyParser.json());

@@ -3,14 +3,15 @@ const bodyParser = require('body-parser');
 const errorHandler = require('errorhandler');
 const http = require('http');
 
-const dbFactory = require('./lib/db');
-const authServiceFactory = require('./lib/authService');
-const authControllerFactory = require('./lib/authController');
+const diContainer = require('./lib/diContainer')();
 
-const db = dbFactory('example-db');
-const authService = authServiceFactory(db, 'SHHH!');
-const authController = authControllerFactory(authService);
+diContainer.register('dbName', 'example-db');
+diContainer.register('tokenSecret', 'SHHH!');
+diContainer.factory('db', require('./lib/db'));
+diContainer.factory('authService', require('./lib/authService'));
+diContainer.factory('authController', require('./lib/authController'));
 
+const authController = diContainer.get('authController');
 
 const app = module.exports = express();
 app.use(bodyParser.json());

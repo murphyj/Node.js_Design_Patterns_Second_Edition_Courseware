@@ -1,0 +1,13 @@
+{
+  "name": "auth-service-plugin-controlled",
+  "version": "1.0.0",
+  "description": "Using Dependency Injection (DI) it demonstrates how you an implement an express auth service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
