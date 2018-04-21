@@ -32,8 +32,7 @@ class TwitterService {
     }
 
     list(handle, callback) {
-        var params = {screen_name: handle};
-        this.client.get('statuses/user_timeline', params, function(err, tweets, response) {
+        this.client.get('statuses/user_timeline', {handle: handle}, function(err, tweets, response) {
             callback(err, handle, tweets, response);
         });
     }

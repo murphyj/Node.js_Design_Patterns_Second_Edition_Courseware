@@ -19,13 +19,23 @@ const twitterController = new TwitterController(twitterService);
 const app = module.exports = express();
 app.use(bodyParser.json());
 
-app.post('/tweet', twitterController.tweet());
-app.post('/', twitterController.checkToken);
-
-app.use(errorHandler());
-http.createServer(app).listen(3000, () => {
-    console.log('Express server started');
+app.route('/tweet').post(function(req, res, next) {
+    twitterController.tweet(req, res, next);
 });
 
+app.route('/retweet').post(function(req, res, next) {
+    twitterController.retweet(req, res, next);
+});
 
+app.route('/search').get(function(req, res, next) {
+    twitterController.search(req, res, next);
+});
 
+app.route('/list').get(function(req, res, next) {
+    twitterController.list(req, res, next);
+});
+
+app.use(errorHandler());
+http.createServer(app).listen(3001, () => {
+    console.log('Express server started');
+});
