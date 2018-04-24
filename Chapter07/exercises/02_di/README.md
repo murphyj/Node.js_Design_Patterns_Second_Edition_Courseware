@@ -55,6 +55,6 @@ TWITTER_CONSUMER_KEY=lrMg7CFUvlduDManN4vKLQW9Y TWITTER_CONSUMER_SECRET=x57mXhRtt
 
 Note: _These env variables do not work with a real account - please sign up for access_
 
-## Exercise - Hardcoded dependencies
+## Exercise - Dependency Injection
 
-For this exercise, you need to rely to implement the API using hardcoded dependencies where possible. 
+For this exercise, you need to implement the API using dependency injection where possible. 

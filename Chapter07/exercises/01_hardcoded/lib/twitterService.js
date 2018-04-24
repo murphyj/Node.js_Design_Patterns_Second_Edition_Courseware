@@ -1,11 +1,11 @@
 "use strict";
 
-const Twitter = require('twitter');
+const TwitterStub = require('./twitterStub');
 
 class TwitterService {
 
     constructor(key, secret, accessKey, accessToken) {
-        this.client = new Twitter({
+        this.client = new TwitterStub({
             consumer_key: key,
             consumer_secret: secret,
             access_token_key: accessKey,

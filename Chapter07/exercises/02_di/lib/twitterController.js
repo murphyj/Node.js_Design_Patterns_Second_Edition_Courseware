@@ -1,11 +1,7 @@
-class TwitterController {
+module.exports = (twitterAuth, twitterService) => {
 
-    constructor(twitterService) {
-        this.twitterService = twitterService;
-    }
-
-    tweet(req, res, next) {
-        this.twitterService.tweet(req.param('status'), (err, tweet, response) => {
+    twitterAuth.tweet = (req, res, next) => {
+        twitterService.tweet(req.param('status'), (err, tweet, response) => {
                 if (!err) {
                     console.log("Successfully posted tweet!");
                 } else {
@@ -16,8 +12,8 @@ class TwitterController {
         );
     };
 
-    retweet(req, res, next) {
-        this.twitterService.retweet(req.param('tweetId'), (err, tweet, response) => {
+    twitterAuth.retweet = (req, res, next) => {
+        twitterService.retweet(req.param('tweetId'), (err, tweet, response) => {
                 if (!err) {
                     console.log("Successfully retweeted tweet", tweet);
                 } else {
@@ -27,10 +23,11 @@ class TwitterController {
         );
     };
 
-    search(req, res, next) {
-        this.twitterService.search(req.param('query'), (err, query, tweets, response) => {
+    twitterAuth.search = (req, res, next) => {
+        twitterService.search(req.param('query'), (err, query, tweets, response) => {
             if (!err) {
                 console.log("Searched for tweets using query [" + query + "]");
+                console.log("Response: ", response);
                 console.log("Tweets found: ", tweets);
             } else {
                 console.log("There was an error search for tweets using query: " + query);
@@ -38,17 +35,30 @@ class TwitterController {
         });
     };
 
-    list(req, res, next) {
-        this.twitterService.list(req.param('handle'), (err, handle, tweets, response) => {
+    twitterAuth.list = (req, res, next) => {
+        twitterService.list(req.param('handle'), (err, handle, tweets, response) => {
                 if (!err) {
                     console.log("Printing tweets for handle", handle);
                     console.log("Tweets: ", tweets);
                 } else {
-                    console.log("There was an error listing tweets for handle[ " + handle + "]");
+                    console.log("There was an error listing tweets for handle[" + handle + "]");
+                    console.log("Error:", err);
                 }
             }
         );
     };
-}
 
-module.exports = TwitterController;
+    twitterAuth.oauthConnect = (req, res, next) => {
+        console.log('oauth connected');
+    };
+
+    twitterAuth.oauthCallback = (req, res, next) => {
+        console.log()
+    };
+
+    twitterAuth.logout = (req, res, next) => {
+
+    };
+
+    return twitterAuth;
+};
