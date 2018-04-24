@@ -24,7 +24,29 @@ Example url:
 Example url:
 `curl -X GET http://localhost:3001/list?handle=developerangst`
 
-## Enable Twitter API Access
+## Exercise - Dependency Injection
+
+For this exercise, you need to implement the API using dependency injection where possible.
+
+### Application Start
+
+You can start the app simply by running...
+
+```
+node app
+```
+
+## Bonus Material - Implementing it with Twitter's real API
+
+As Bonus material you could try replacing the TwitterStub class with a real API.
+
+To do this you'll need to do the following...
+
+* Install the `twitter` npm module
+* Replace the existing stub API with that module
+* Implement OAuth. See the [Twitter Developer Documentation on Authentication](https://developer.twitter.com/en/docs/basics/authentication/overview)
+
+### Enable Twitter API Access
 
 In order that you can use the Twitter API, you will need to use your twitter account to sign-up for Twitter API access.
 
@@ -55,6 +77,4 @@ TWITTER_CONSUMER_KEY=lrMg7CFUvlduDManN4vKLQW9Y TWITTER_CONSUMER_SECRET=x57mXhRtt
 
 Note: _These env variables do not work with a real account - please sign up for access_
 
-## Exercise - Dependency Injection
-
-For this exercise, you need to implement the API using dependency injection where possible. 
+ 
