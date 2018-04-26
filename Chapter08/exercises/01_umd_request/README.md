@@ -12,3 +12,5 @@ In this example your task is to do the following:
 
 * Wrap an HTTP client as a UMD Module that sends a message to the `/say` endpoint
 
+The server should console.log out the message passed via the parameter from the client. This will prove that the umdModule is correctly working as expected. 
+

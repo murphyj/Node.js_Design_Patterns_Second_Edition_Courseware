@@ -1,7 +1,7 @@
 var person = {
     "firstname": "Al",
     "surname": "Pacino"
-}
+};
 
 class MovieStar {
     constructor(person) {
