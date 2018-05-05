@@ -3,65 +3,61 @@ const stampit = require('stampit');
 const piece = stampit()
   .props({
     name: 'Chess Piece',
-    diagonal: true,
-    vertical: true,
-    horizontal: true,
     spaces: "*",
+    directions: [],
     char: 'P'
-  }).methods({
-  moves() {
-    let string = '';
+  });
 
-    let directions = [];
-    if (this.diagonal) {
-      directions.push('D');
-    }
-    if (this.horizontal) {
-      directions.push('H');
-    }
-    if (this.vertical) {
-      directions.push('V');
-    }
+const mover = stampit()
+    .methods({
+        moves() {
+            let string = this.char + '[' + this.directions.join('|') + ']' + '[' + this.spaces + ']';
+            console.log(string);
+        },
+        setDirections(dirs) {
+            this.directions = [];
+            dirs.forEach(dir => {
+                if (!this.directions.includes(dir)) {
+                    this.directions.push(dir);
+                }
+            });
+        }
+    });
 
-    string = this.char + '[' + directions.join('|') + ']' + '[' + this.spaces + ']';
-    console.log(string);
-  }
-});
-//
-// const mover = stampit()
+const shortMover = stampit()
+    .props({
+       spaces: '1'
+    });
 
+const longMover = stampit()
+    .props({
+        spaces: '*'
+    });
 
-const king = piece();
+const King = stampit.compose(piece, mover, shortMover);
+const king = King();
 king.name = 'King';
-king.diagonal = true;
-king.vertical = true;
-king.horizontal = true;
-king.spaces = "1";
 king.char = "K";
+king.setDirections(['V', 'H', 'D']);
 
-const queen = piece();
+
+const Queen = stampit.compose(piece, mover, longMover);
+const queen = Queen();
 queen.name = 'Queen';
-queen.diagonal = true;
-queen.vertical = true;
-queen.horizontal = true;
-queen.spaces = "*";
 queen.char = "Q";
+queen.setDirections(['V', 'H', 'D']);
 
-const bishop = piece();
+const Bishop = stampit.compose(piece, mover, longMover);
+const bishop = Bishop();
 bishop.name = 'Bishop';
-bishop.diagonal = true;
-bishop.vertical = false;
-bishop.horizontal = false;
-bishop.spaces = "*";
 bishop.char = "B";
+bishop.setDirections(['D']);
 
-const rook = piece();
+const Rook = stampit.compose(piece, mover, longMover);
+const rook = Rook();
 rook.name = 'Rook';
-rook.diagonal = false;
-rook.vertical = true;
-rook.horizontal = true;
-rook.spaces = "*";
 rook.char = "R";
+rook.setDirections(['V', 'H']);
 
 king.moves();
 queen.moves();
