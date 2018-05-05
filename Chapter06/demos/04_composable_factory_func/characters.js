@@ -8,11 +8,6 @@ const character = stampit()
         y: 0
     });
 
-// const c = character();
-// c.name = 'John';
-// c.lifePoints = 10;
-// console.log(c);
-
 const mover = stampit()
     .methods({
         move(xIncr, yIncr) {
