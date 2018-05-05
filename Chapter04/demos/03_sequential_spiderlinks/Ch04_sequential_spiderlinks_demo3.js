@@ -24,14 +24,13 @@ function download(url, filename, nesting) {
   .then(() => {
     console.log(`Downloaded and saved: ${url}`);
     return body;
-  }).then(Promise.resolve());
-
-  return spiderLinks(url, body, nesting);
+  }).then(spiderLinks(url, body, nesting));
 }
 
 function spiderLinks(currentUrl, body, nesting) {
+  console.log('inside spider links');
   let promise = Promise.resolve();
-  if(nesting === 0) {
+  if (nesting === 0) {
     return promise;
   }
   const links = utilities.getPageLinks(currentUrl, body);

@@ -8,7 +8,9 @@ function decorate(component) {
     Decorator.prototype = Object.create(proto);
 
     Decorator.prototype.greetings = function() {
-        return 'Hi!';
+        var hi = "Hi!";
+        console.log(hi);
+        return hi;
     };
 
     // new method
