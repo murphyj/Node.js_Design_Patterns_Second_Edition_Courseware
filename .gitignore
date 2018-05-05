@@ -12,3 +12,17 @@
 /Chapter04/exercises/02_bluebird/node_modules
 node_modules
 .DS_Store
+/Chapter07/demos/03_service_locator/example-db/MANIFEST-000008
+/Chapter07/demos/03_service_locator/example-db/MANIFEST-000006
+/Chapter07/demos/03_service_locator/example-db/LOG.old
+/Chapter07/demos/03_service_locator/example-db/LOG
+/Chapter07/demos/03_service_locator/example-db/CURRENT
+/Chapter07/demos/03_service_locator/example-db/000009.log
+/Chapter07/demos/03_service_locator/example-db/000007.log
+/Chapter07/demos/01_hardcoded/example-db/MANIFEST-000006
+/Chapter07/demos/01_hardcoded/example-db/MANIFEST-000004
+/Chapter07/demos/01_hardcoded/example-db/LOG.old
+/Chapter07/demos/01_hardcoded/example-db/LOG
+/Chapter07/demos/01_hardcoded/example-db/CURRENT
+/Chapter07/demos/01_hardcoded/example-db/000007.log
+/Chapter07/demos/01_hardcoded/example-db/000005.log
