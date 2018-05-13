@@ -26,3 +26,5 @@ node_modules
 /Chapter07/demos/01_hardcoded/example-db/CURRENT
 /Chapter07/demos/01_hardcoded/example-db/000007.log
 /Chapter07/demos/01_hardcoded/example-db/000005.log
+/Chapter08/exercises/03_branching/npm-debug.log
+/Chapter08/exercises/03_branching/dist
