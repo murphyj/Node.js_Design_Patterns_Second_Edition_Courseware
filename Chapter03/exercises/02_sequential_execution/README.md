@@ -2,7 +2,7 @@
 
 In this exercise, we have an number of different emails, the contents of which is stored in a variety of different files inside an `drafts` folder. 
 
-Using the Unlimited Parallel Execution pattern we want to perform the following:
+Using the Unlimited Sequential Execution pattern we want to perform the following:
 
 * Load the contents of each of the `drafts` from the files
 * Send each of the emails with parallel execution
@@ -16,12 +16,17 @@ To simulate the benefits of parallel execution we are going to use a free email 
 
 You can sign up for mailgun [here](https://signup.mailgun.com/new/signup)
 
+### Sandbox Credentials
+
+Once you have signed up, you will need to sign-in to the account dashboard.
+Click on the domains tab 
+
 ## Project Structure
 
-Exercise folder: `02_parallel_execution`
-Drafts folder: `02_parallel_execution/drafts`
-Outbox folder: `02_parallel_execution/outbox`
-Sent folder: `02_parallel_execution/sent`
+Exercise folder: `02_sequential_execution`
+Drafts folder: `02_sequential_execution/drafts`
+Outbox folder: `02_sequential_execution/outbox`
+Sent folder: `02_sequential_execution/sent`
 
 ## Project Setup
 
