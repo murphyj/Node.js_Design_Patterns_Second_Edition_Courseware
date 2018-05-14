@@ -1,9 +1,9 @@
 const fs = require('fs');
 
-const api_key = 'key-b8ae87bf4e1eabaf95b1ddab4944dc60';
-const domain = 'sandbox763598cb1b03459d9c000092f00aa8f7.mailgun.org';
-const sender = 'jmurphy84@googlemail.com';
-const recipient = 'jmurphy84@googlemail.com';
+const api_key = 'your_api_key';
+const domain = 'sandboxdomain.mailgun.org';
+const sender = 'sender@email.org';
+const recipient = 'recipient@email.org';
 
 const config = {
     apiKey: api_key,
