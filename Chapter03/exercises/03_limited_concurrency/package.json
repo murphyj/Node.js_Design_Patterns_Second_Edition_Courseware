@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.0",
-    "mailgun-js": "^0.18.0"
+    "async": "~2.6.0",
+    "mailgun-js": "~0.18.0"
   }
 }
