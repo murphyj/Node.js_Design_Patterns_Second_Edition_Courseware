@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "from2-array": "0.0.4",
-    "through2": "^2.0.3"
+    "from2-array": "~0.0.4",
+    "through2": "~2.0.3"
   }
 }

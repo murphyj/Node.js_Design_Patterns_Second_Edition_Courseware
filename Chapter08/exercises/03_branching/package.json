@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "string-replace-loader": "^2.1.1",
+    "string-replace-loader": "~2.1.1",
     "webpack": "~4.6.0"
   },
   "devDependencies": {
-    "webpack-cli": "^2.0.15"
+    "webpack-cli": "~2.0.15"
   }
 }

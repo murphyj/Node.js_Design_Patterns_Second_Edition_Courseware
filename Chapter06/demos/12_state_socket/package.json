@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-over-tcp": "^0.3.2"
+    "json-over-tcp": "~0.3.2"
   }
 }

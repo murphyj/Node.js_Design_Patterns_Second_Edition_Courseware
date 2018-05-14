@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mkdirp": "^0.5.1",
-    "request": "^2.67.0",
-    "slug": "^0.9.1"
+    "mkdirp": "~0.5.1",
+    "request": "~2.67.0",
+    "slug": "~0.9.1"
   }
 }

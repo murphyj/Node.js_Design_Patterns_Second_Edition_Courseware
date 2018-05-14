@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^0.17.0",
-    "mkdirp": "^0.5.1",
-    "path": "^0.12.7",
-    "request": "^2.83.0",
-    "slug": "^0.9.1"
+    "cheerio": "~0.17.0",
+    "mkdirp": "~0.5.1",
+    "path": "~0.12.7",
+    "request": "~2.83.0",
+    "slug": "~0.9.1"
   }
 }

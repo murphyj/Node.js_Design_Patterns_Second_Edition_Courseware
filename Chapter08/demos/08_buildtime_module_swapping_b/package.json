@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jquery": "^2.2.1",
-    "toastr": "^2.1.2",
+    "jquery": "~2.2.1",
+    "toastr": "~2.1.2",
     "webpack": "~3.11.0"
   }
 }
