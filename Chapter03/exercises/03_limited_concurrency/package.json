@@ -1,5 +1,5 @@
 {
-  "name": "email-movie-quotes-limited-parallel",
+  "name": "email-movie-quotes-parallel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "mailgun-js": "^0.18.0"
   }
 }
