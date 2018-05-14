@@ -20,6 +20,24 @@ To simulate the benefits of limiting concurrency we are going to use a free emai
 
 You can sign up for mailgun [here](https://signup.mailgun.com/new/signup)
 
+### Mailgun Credentials
+
+Once you have signed up, you will need to sign-in to the account dashboard.
+Click on the domains tab and create a domain (you can't use a sandbox).
+
+Once a domain is created you should have an API key.
+
+Set the following details in the index.js file
+
+```$javascript
+const api_key = 'your_api_key';
+const domain = 'sandboxdomain.mailgun.org';
+const sender = 'sender@email.org';
+const recipient = 'recipient@email.org';
+```
+
+Once set, you should be able to correctly send emails to your email address using Mailgun.
+
 ## Project Structure
 
 Exercise folder: `04_limiting_concurrency`
